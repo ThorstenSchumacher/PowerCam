@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Dr. T.Schumacher</author>
+ <class>camcom_mainwin</class>
+ <widget class="QWidget" name="camcom_mainwin">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>446</width>
+    <height>294</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">button-&gt;setStyleSheet(&quot;border-image:url(:/icons/arrow_l.png);&quot;);</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>441</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(50, 49, 52);
+border-radius: 0px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>5</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#f0f0f0;&quot;&gt;PowerCam&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>40</y>
+      <width>791</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 0px;
+border: 3px solid rgba(0, 0, 0, 50);
+background-color: rgba(0, 0, 0, 50);
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="comboBox_camport">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>15</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(220,220,220)
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_comrefresh">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: none;
+	border-radius: 0px;
+	background-color: rgb(50, 50, 50);
+	color: rgb(220,220,220);
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QPushButton:hover {
+	background-color: rgb(100, 150, 200);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: rgb(130, 180, 230);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>refresh</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_comconnect">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: none;
+	border-radius: 0px;
+	background-color: rgb(50, 50, 50);
+	color: rgb(220,220,220);
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QPushButton:hover {
+	background-color: rgb(100, 150, 200);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: rgb(130, 180, 230);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>connect</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent;
+border-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; font-style:italic; color:#6496c8;&quot;&gt;camera&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>105</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 2px;
+background-color: rgba(255, 0, 100, 0);
+border-color: rgba(5, 5, 5, 0);
+border-width: 1px;
+
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#dcdcdc;&quot;&gt;Sensitivity:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_autosens">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>101</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+color: rgb(220,220,220);
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>auto</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_exposure">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>105</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 2px;
+background-color: rgba(0, 0, 0, 50);
+border-color: rgba(5, 5, 5, 0);
+border-width: 1px;
+color: rgb(220,220,220);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>-10</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_exposure">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>105</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid black;
+    height: 8px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    margin: 2px 0;
+	background: rgba(100, 150, 200,50);
+}
+
+QSlider::handle:horizontal {
+    background: rgb(100,150,200);
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 3px;
+}
+</string>
+    </property>
+    <property name="minimum">
+     <number>-14</number>
+    </property>
+    <property name="maximum">
+     <number>-4</number>
+    </property>
+    <property name="value">
+     <number>-8</number>
+    </property>
+    <property name="sliderPosition">
+     <number>-8</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="invertedControls">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_status">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>5</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+border-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ff0000;&quot;&gt;waiting&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_mini">
+    <property name="geometry">
+     <rect>
+      <x>385</x>
+      <y>10</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: none;
+	border-radius: 0px;
+	background-color: rgb(100,100,100);
+	background-image: url(:/icons/minimize.png);
+	color: white;
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QPushButton:hover {
+	background-color: rgb(100, 150, 200);
+	color: white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>140</y>
+      <width>451</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 0px;
+border: 3px solid rgba(0, 0, 0, 50);
+background-color: rgba(0, 0, 0, 50);
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget_scopetype">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>441</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent;</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageinfo">
+      <widget class="QLabel" name="infolabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>-10</y>
+         <width>421</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 2px;
+background-color: rgba(255, 0, 100, 0);
+border-color: rgba(5, 5, 5, 0);
+border-width: 1px;
+
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#ffffff;&quot;&gt;Webcam-Powermeter - PrintedLabs&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#dcdcdc;&quot;&gt;Version: 1.0 - 11/14/2023&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#dcdcdc;&quot;&gt;Would you like to learn more about PowerCam and get&lt;br/&gt;a tutorial on all implemented functions? You can find this and&lt;br/&gt;much more on our website &lt;/span&gt;&lt;a href=&quot;https://printedlabs.uni-bayreuth.de/&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline; color:#dc0000;&quot;&gt;printedlabs.uni-bayreuth.de&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#dcdcdc;&quot;&gt;!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QFrame" name="frame_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>5</y>
+         <width>411</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 5px;
+border: 3px solid rgba(0, 0, 0, 50);
+background-color: rgba(0, 0, 0, 50);
+
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="label_value">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>211</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 50pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(100, 150, 200);
+background-color: transparent;
+border: none;
+</string>
+        </property>
+        <property name="text">
+         <string>---,--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>82</y>
+          <width>371</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QProgressBar {
+background-color: rgb(54, 54, 54);
+border: transparent;
+}
+
+QProgressBar::chunk {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0397727 rgba(0, 0, 255, 255), stop:1 rgba(255, 0, 255, 255));
+border: transparent;
+}
+
+
+</string>
+        </property>
+        <property name="maximum">
+         <number>1023</number>
+        </property>
+        <property name="value">
+         <number>1023</number>
+        </property>
+        <property name="textVisible">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_unit">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>35</y>
+          <width>111</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(100, 150, 200);
+background-color: transparent;
+border: none;
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;arb. units&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_unit_2">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>0</y>
+          <width>131</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(100, 150, 200);
+background-color: transparent;
+border: none;
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;saturation alert!!!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_5"/>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_infobox">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>50</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: none;
+	border-radius: 0px;
+	background-color: rgb(90, 90, 90);
+	background-image: url(:/icons/info.png);
+	color: white;
+}
+
+QPushButton:hover {
+	background-image: url(:/icons/infob.png);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: rgb(130, 180, 230);
+	color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_showsensor">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>101</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+color: rgb(220,220,220);
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>show</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_exit">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>20</y>
+     <width>20</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	border: none;
+	border-radius: 0px;
+	background-color: rgb(120,0,0);
+	background-image: url(:/icons/exit.png);
+	color: white;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QPushButton:hover {
+	background-color: rgb(255, 0, 0);
+	color: white;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../graphics/icons/buttons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
